@@ -1,0 +1,22 @@
+9. 
+
+db.items.insert({ item_name: "cover Bean bag handle chair - Biru", stock: 2, price: 250000, accept_installment_payment: "yes", lenght: 6, color: "blue", item_detail: {weight: 1000, condition: "new", insurance: "optional"}});
+
+db.items.insert({ item_name: "Canon EF 50mm f/1.8 STM", stock: 17, price: 1740000,sold: 32, seen: 4857, item_detail: {weight: 1000, condition: "new", insurance: "yes"}});
+
+db.items.insert({ item_name: "Tripod Handphone Tripod Kamera 3110 1 Meter Free Holder", stock: 77, price: 60000,sold: 232, seen: 10907, item_detail: {weight: 650, condition: "new", insurance: "optional", category: "camera accessories"}});
+
+10.
+db.createCollection(“store”);
+db.store.insert({store_name: "Best_Com", location: "Jakarta Barat", points: 476, reputation: "good", latest_online: 12});
+db.store.insert({store_name: "Aufaa_store18", location: "Kota Bekasi", points: 128, reputation: "bad", latest_online: 3});
+db.store.insert({store_name: "Healthy_OK", location: "Bogor", points: 674, reputation: "excellent", latest_online: 1});
+db.store.insert({store_name: "Allphone_jkt", location: "Jakarta Utara", points: 100, reputation: "good", latest_online: 16});
+db.store.insert({store_name: "cozyme3", location: "Banten", points: 153, reputation: "bad", latest_online: 60});
+
+11. 
+db.items.find();
+
+12. db.items.find({item_name: "Real Me 7"})
+13. db.items.find({"item_detail.weight": 400})
+14. db.items.update({item_name: "Real Me 7"}, { $set: {stock: 25} })

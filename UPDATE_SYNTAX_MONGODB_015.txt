@@ -1,0 +1,14 @@
+db.items.update({item_name: "Real Me 7"}, {$set: {store_name: "Allphone_jkt"}});
+db.items.update({item_name: "GUQI Juicer Cup Mini Electric 320ML Waterproof"}, {$set: {store_name: "Aufaa_store18"}});
+db.items.update({item_name: "Pioneer Earphone Extra Bass SE-QL2T - Hitam"}, {$set: {store_name: "Allphone_jkt"}});
+db.items.update({item_name: "L636/12L lampu gantung laba laba hias bisa atur teku dekor kafe retro"}, {$set: {store_name: "cozyme3"}});
+db.items.update({item_name: "Masker KN95 Respirator N95 Katup Filter Udara 3D"}, {$set: {store_name: "Healthy_OK"}});
+db.items.update({item_name: "MASKER KN95 N95 MASKER MEDIS 5 PLY ANTI VIRUS / BELI 10 GRATIS 1 - Hitam"}, {$set: {store_name: "Healthy_OK"}});
+db.items.update({item_name: "cover Bean bag handle chair - Biru"}, {$set: {store_name: "cozyme3"}});
+db.items.update({item_name: "Canon EF 50mm f/1.8 STM"}, {$set: {store_name: "Best_Com"}});
+db.items.update({item_name: "Tripod Handphone Tripod Kamera 3110 1 Meter Free Holder"}, {$set: {store_name: "Best_Com"}});
+db.items.update({item_name: "Alat Fitness Treadmill iReborn Paris"}, {$set: {store_name: Healthy_OK"}});
+
+
+
+
