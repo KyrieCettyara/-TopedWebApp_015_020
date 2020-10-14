@@ -1,0 +1,4 @@
+#MongoDB
+spring.data.mongodb.uri=mongodb://192.168.190.223:27017/toped_db 
+spring.data.mongodb.username=admin
+spring.data.mongodb.password=secret

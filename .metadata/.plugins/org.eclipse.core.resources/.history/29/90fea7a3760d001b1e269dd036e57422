@@ -1,0 +1,4 @@
+spring.data.mongodb.authentication-database= # Authentication database name.
+spring.data.mongodb.password=secret # Login password of the mongo server.
+spring.data.mongodb.uri=mongodb://192.168.190.223:27017/toped_db # Mongo database URI. When set, host and port are ignored.
+spring.data.mongodb.username=admin # Login user of the mongo server.

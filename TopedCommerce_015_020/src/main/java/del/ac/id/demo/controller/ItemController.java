@@ -8,11 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import del.ac.id.demo.jpa.Item;
-import del.ac.id.demo.jpa.service.ItemRepository;
+import del.ac.id.demo.jpa.ItemRepository;
 
 @RestController
 public class ItemController {
-	@Autowired ItemRepository itemRepository;
+	@Autowired 
+	ItemRepository itemRepository;
 	
 	@RequestMapping("/item")
 	public ModelAndView item() {
