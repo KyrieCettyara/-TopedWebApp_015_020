@@ -13,6 +13,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="E:\Kuliah\Materi\Semester 5\Java Enterprise\Week 4\Praktikum\CRUD_Springboot"/>
 			<item value="E:\Kuliah\Materi\Semester 5\Java Enterprise\Week 6\Praktikum\TopedCommerce_015_020"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">

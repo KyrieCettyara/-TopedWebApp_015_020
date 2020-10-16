@@ -1,0 +1,6 @@
+package del.ac.id.demo.jpa;
+
+public class Buy {
+	private int total_item;
+	private double rating;
+}
