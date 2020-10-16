@@ -5,38 +5,30 @@ import org.springframework.data.mongodb.core.index.IndexDirection;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="user")
-public class User {
+@Document(collection="role")
+public class Role {
 	@Id
-	private String id;
+	private int id;
 	@Indexed(unique = true, direction = IndexDirection.DESCENDING, dropDups = true)
-	private String username;
-	private String pwd;
 	private int roleid;
+	private String roledesc;
 	
-	public User() {}
-	public User(String username, String pwd, int roleid) {
-		this.username = username;
-		this.pwd = pwd;
+	protected Role() {}
+	public Role(int roleid,String roledesc) {
+		this.roledesc = roledesc;
 		this.roleid = roleid;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
 	}
 	public void setRoleid(int roleid) {
 		this.roleid = roleid;
 	}
+	public void setRoledesc(String roledesc) {
+		this.roledesc = roledesc;
+	}
 	
-	public String getUsername() {
-		return this.username;
-	}
-	public String getPwd() {
-		return this.pwd;
-	}
 	public int getRoleid() {
 		return this.roleid;
+	}
+	public String getRoledesc() {
+		return this.roledesc;
 	}
 }
