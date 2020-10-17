@@ -1,0 +1,81 @@
+package del.ac.id.demo.jpa;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
+@Document("store")
+public class Store {
+	@Id
+	String id;
+	private String store_name;
+	private String location;
+	private int point;
+	private String reputation;
+	private int latest_online;
+	@DBRef
+	@Field("items")
+	private Item item;
+	
+	public Store() {}
+	public Store(
+			final String store_name,
+			final String location,
+			final int point,
+			final String reputation,
+			final int latest_online,
+			final Item item) {
+		this.store_name = store_name;
+		this.location = location;
+		this.point = point;
+		this.reputation = reputation;
+		this.latest_online = latest_online;
+		this.item = item;
+	}
+	
+	public String getId() {
+		return this.id;
+	} 
+	public String getStore_name() {
+		return this.store_name;
+	}
+	public String getLocation() {
+		return this.location;
+	}
+	public int getPoint() {
+		return this.point;
+	}
+	public String getReputation() {
+		return this.reputation;
+	}
+	public int getLatest_online() {
+		return this.latest_online;
+	}
+	public Item getItem() {
+		return this.item;
+	}
+	
+	public void setId(String id) {
+		this.id = id;
+	}
+	public void setStore_name(String store_name) {
+		this.store_name = store_name;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public void setPoint(int point) {
+		this.point = point;
+	}
+	public void setReputation(String reputation) {
+		this.reputation = reputation;
+	}
+	public void setLatest_online(int latest_online) {
+		this.latest_online = latest_online;
+	}
+	public void setItem(Item item) {
+		this.item = item;
+	}
+	
+}

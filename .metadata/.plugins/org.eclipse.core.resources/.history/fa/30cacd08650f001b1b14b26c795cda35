@@ -1,0 +1,15 @@
+package del.ac.id.demo.jpa;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document("store")
+public class Store {
+	@Id
+	String id;
+	private String store_name;
+	private String location;
+	private int point;
+	private String reputation;
+	private int latest_online;
+}
