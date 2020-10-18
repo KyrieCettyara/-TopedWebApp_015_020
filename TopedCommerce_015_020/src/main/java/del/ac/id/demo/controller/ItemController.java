@@ -1,7 +1,5 @@
 package del.ac.id.demo.controller;
 
-import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,10 +23,6 @@ import org.springframework.web.servlet.view.RedirectView;
 import del.ac.id.demo.jpa.Buy;
 import del.ac.id.demo.jpa.Item;
 import del.ac.id.demo.jpa.ItemRepository;
-import del.ac.id.demo.jpa.LoginRepository;
-import del.ac.id.demo.jpa.User;
-import del.ac.id.demo.jpa.UserRepository;
-
 @RestController
 public class ItemController {
 	@Autowired 
@@ -129,8 +123,5 @@ public class ItemController {
 		mv.addObject("items",items);
 		return new RedirectView("/item");
 	}
-	
-	
-	//INI BUKAN YANG AKAN TERJADI
 	
 }

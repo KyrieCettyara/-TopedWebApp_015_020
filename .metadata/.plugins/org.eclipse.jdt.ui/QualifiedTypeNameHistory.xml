@@ -24,4 +24,7 @@
     <fullyQualifiedTypeName name="del.ac.id.demo.jpa.ItemRepository"/>
     <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.query.Query"/>
     <fullyQualifiedTypeName name="org.springframework.data.mongodb.repository.MongoRepository"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.stream.StreamSupport"/>
+    <fullyQualifiedTypeName name="com.mongodb.client.DistinctIterable"/>
 </qualifiedTypeNameHistroy>
