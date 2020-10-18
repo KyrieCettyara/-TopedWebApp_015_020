@@ -70,9 +70,7 @@ public class LoginController {
 			System.out.println("Error");
 		}
 		
-		User userLogin = userRepository
-				.findByUsername(user.getUsername());
-		
+		User userLogin = userRepository.findByUsername(user.getUsername());	
 		
 		if(userLogin == null) {
 			attribute.addFlashAttribute("NotRegistered", "Akun tidak terdaftar");
@@ -106,14 +104,6 @@ public class LoginController {
 		}
 	}
 	
-	@GetMapping("/logout/{un}")
-	public ModelAndView Logout(@ModelAttribute("user") User user,
-		BindingResult bindingResult, Model model, @PathVariable(value="un") String username) {
-
-		ModelAndView mv = new ModelAndView("login");
-		mv.addObject("user",new User());
-		return mv;
-	}
 	
 	@GetMapping("/loginIndex")
 	public ModelAndView LoginIndex() {
@@ -163,17 +153,7 @@ public class LoginController {
 		return "redirect:index";
 	}
 	
-	@RequestMapping("/itemAdmin")
-	public ModelAndView allItem(Model model) {
-		List<Item> listItem = itemRepository.findAll();
-		ModelAndView mv = new ModelAndView("itemAdmin");
-		
-		System.out.println(listItem.size());
-		mv.addObject("items", listItem);
-		
-		return mv;
-		
-	}
+
 	
 	//add item
 	@GetMapping("/addItem")

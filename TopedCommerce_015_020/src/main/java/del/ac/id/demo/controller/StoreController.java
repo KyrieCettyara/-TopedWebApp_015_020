@@ -47,17 +47,18 @@ public class StoreController {
 		mv.addObject("listItem", listItem);
 		return mv;
 	}
-	@GetMapping("/")
-	public ModelAndView NoData(@ModelAttribute Item item, BindingResult bindingResult, Model model) {
-		if(bindingResult.hasErrors()) {
-			System.out.println("Error");
-		}
-				
-		ModelAndView mv = new ModelAndView("index");
-		List<Item> listItem =  itemRepository.findAll();
-		mv.addObject("listItem", listItem);
-		return mv;
-	}
+//	@GetMapping("/")
+//	public ModelAndView NoData(@ModelAttribute Item item, BindingResult bindingResult, Model model) {
+//		if(bindingResult.hasErrors()) {
+//			System.out.println("Error");
+//		}
+//				
+//		ModelAndView mv = new ModelAndView("index");
+//		List<Item> listItem =  itemRepository.findAll();
+//		mv.addObject("listItem", listItem);
+//		return mv;
+//	}
+	
 	@GetMapping(value="/storeDetail/{sn}")
 	public ModelAndView storeDetail(@ModelAttribute Item item, BindingResult bindingResult,
 			Model model,@PathVariable("sn") String sn,RedirectAttributes attributes) {

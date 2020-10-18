@@ -23,6 +23,8 @@ import org.springframework.web.servlet.view.RedirectView;
 import del.ac.id.demo.jpa.Buy;
 import del.ac.id.demo.jpa.Item;
 import del.ac.id.demo.jpa.ItemRepository;
+import del.ac.id.demo.jpa.LoginRepository;
+import del.ac.id.demo.jpa.UserRepository;
 @RestController
 public class ItemController {
 	@Autowired 
@@ -35,10 +37,24 @@ public class ItemController {
 	public ModelAndView item() {
 		List<Item> items = itemRepository.findAll();
 		ModelAndView mv = new ModelAndView("item");
+		
 		mv.addObject("items",items);
 		
 		return mv;
 	}
+	
+	@RequestMapping("/itemAdmin")
+	public ModelAndView allItem(Model model) {
+		List<Item> listItem = itemRepository.findAll();
+		ModelAndView mv = new ModelAndView("itemAdmin");
+		
+		System.out.println(listItem.size());
+		mv.addObject("items", listItem);
+		
+		return mv;
+		
+	}
+	
 	
 	@RequestMapping(value="/buyItem/{id}",method= RequestMethod.POST)
 	public RedirectView insertData(@ModelAttribute Buy buy, BindingResult bindingResult,
