@@ -18,6 +18,10 @@ public class Item {
 	
 	@Field("item_detail")
 	private ItemDetail itemDetail;
+//	
+//	@DBRef
+//	@Field("store")
+	private String store_name;
 	
 	public Item() {}
 	public Item(
@@ -30,7 +34,8 @@ public class Item {
 			final int sold,
 			final int seen,
 			final int length,
-			final ItemDetail itemDetail){
+			final ItemDetail itemDetail,
+			final String store){
 		this.item_name = item_name;
 		this.color = color;
 		this.length = length;
@@ -42,6 +47,7 @@ public class Item {
 		this.seen = seen;
 		this.length = length;
 		this.itemDetail = itemDetail;
+		this.store_name = store;
 	}
 	public String getId() {
 		return id;
@@ -63,6 +69,8 @@ public class Item {
 	public void setSeen(int seen) {this.seen = seen;}
 	public void setLength(int length) {this.length = length;}
 	public void setItemDetail(ItemDetail itemDetail) {this.itemDetail = itemDetail;}
+	public void setStore_name(String store) {this.store_name = store;}
+	
 	
 	public String getItem_name() {return this.item_name;}
 	public String getColor() {return this.color;}
@@ -75,4 +83,5 @@ public class Item {
 	public int getSeen() {return this.seen;}
 	public int getLength() {return this.length;}
 	public ItemDetail getItemDetail() {return this.itemDetail;}
+	public String getStore_name() {return this.store_name;}
 }

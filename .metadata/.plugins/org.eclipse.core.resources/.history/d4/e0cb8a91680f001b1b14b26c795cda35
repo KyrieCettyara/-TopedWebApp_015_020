@@ -1,0 +1,5 @@
+package del.ac.id.demo.jpa;
+
+public interface StoreRepository {
+
+}

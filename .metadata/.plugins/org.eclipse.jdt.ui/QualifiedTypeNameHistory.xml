@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.data.mongodb.repository.MongoRepository"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="com.sun.el.stream.Optional"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="del.ac.id.demo.jpa.Buy"/>
-    <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.mapping.Document"/>
-    <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.MongoTemplate"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.view.RedirectView"/>
-    <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.query.Query"/>
-    <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.query.Criteria"/>
     <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.query.Update"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.support.RedirectAttributes"/>
+    <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.mapping.Document"/>
+    <fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
+    <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.mapping.DBRef"/>
+    <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.mapping.Field"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.MongoTemplate"/>
+    <fullyQualifiedTypeName name="del.ac.id.demo.jpa.Store"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="del.ac.id.demo.jpa.StoreRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="com.jayway.jsonpath.Criteria"/>
+    <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.query.Criteria"/>
+    <fullyQualifiedTypeName name="del.ac.id.demo.jpa.ItemRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.query.Query"/>
+    <fullyQualifiedTypeName name="org.springframework.data.mongodb.repository.MongoRepository"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.stream.StreamSupport"/>
+    <fullyQualifiedTypeName name="com.mongodb.client.DistinctIterable"/>
 </qualifiedTypeNameHistroy>

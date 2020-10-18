@@ -1,7 +1,5 @@
 package del.ac.id.demo.controller;
 
-import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,10 +23,6 @@ import org.springframework.web.servlet.view.RedirectView;
 import del.ac.id.demo.jpa.Buy;
 import del.ac.id.demo.jpa.Item;
 import del.ac.id.demo.jpa.ItemRepository;
-import del.ac.id.demo.jpa.LoginRepository;
-import del.ac.id.demo.jpa.User;
-import del.ac.id.demo.jpa.UserRepository;
-
 @RestController
 public class ItemController {
 	@Autowired 
@@ -45,6 +39,7 @@ public class ItemController {
 		
 		return mv;
 	}
+	
 	@RequestMapping(value="/buyItem/{id}",method= RequestMethod.POST)
 	public RedirectView insertData(@ModelAttribute Buy buy, BindingResult bindingResult,
 			Model model,@PathVariable("id") String id,RedirectAttributes attributes) {
@@ -72,14 +67,10 @@ public class ItemController {
 			mongoTemplate.updateFirst(query,update, Item.class);
 			
 			if(sisa < 0) {
-				//alert yang dibeli melebihi stock tersedia
-				// rating belum di update
 				attributes.addFlashAttribute("stockStatus", "Stock Tidak mencukupi, Hanya tersisa "+stock+" item");
 				return new RedirectView("/startOrder/{id}");
 			}
 			else if(buy.getTotal_item() <= 0) {
-				//alert yang dibeli melebihi stock tersedia
-				// rating belum di update
 				attributes.addFlashAttribute("stockStatus", "Pembelian Barang tidak boleh kurang atau sama dengan 0");
 				return new RedirectView("/startOrder/{id}");
 			}
@@ -121,13 +112,16 @@ public class ItemController {
 		if(bindingResult.hasErrors()) {
 			System.out.println("Error");
 		}
+		
+		Query query = new Query(Criteria.where("id").is(id));
+		Update update = new Update();
+		update.inc("seen",1);
+		mongoTemplate.updateFirst(query, update, Item.class);
+		
 		ModelAndView mv = new ModelAndView("item");
 		List<Item> items = itemRepository.findAll();
 		mv.addObject("items",items);
 		return new RedirectView("/item");
 	}
-	
-	
-	//INI BUKAN YANG AKAN TERJADI
 	
 }

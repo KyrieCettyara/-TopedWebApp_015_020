@@ -24,6 +24,7 @@
 						<th>Condition</th>
 						<th>Category</th>
 						<th>Action</th>
+						<th>Store Name</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -42,7 +43,12 @@
 							<button type="submit" class="btn btn-primary btn-block">Buy</button>
 						</a>
 					</td>
-				</tr>
+					<td>
+						<a th:href=@{/storeDetail/{sn}(sn=${item.store_name})}>
+							<button type="submit" class="btn btn-success btn-block">Store Detail</button>
+						</a>
+					</td>
+					</tr>
 				</tbody>
 			</table>
 	</body>
