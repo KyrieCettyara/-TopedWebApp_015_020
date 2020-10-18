@@ -5,6 +5,9 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 @Document("items")
 public class Item {
 	@Id
@@ -12,7 +15,7 @@ public class Item {
 	private String item_name,color,accept_installment_payment;
 	private double stock,price,discount,rating;
 	private int sold,seen,length;
-	@DBRef
+	
 	@Field("item_detail")
 	private ItemDetail itemDetail;
 	

@@ -1,8 +1,5 @@
 package del.ac.id.demo.jpa;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document("item_detail")
 public class ItemDetail {
 	private double weight;
 	private String condition;

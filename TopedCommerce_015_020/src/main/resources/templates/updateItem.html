@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+</head>
+<body>
+	<div class = "card bg-light">
+		<article class="card-body mx-auto" style="max-width: 1200px;">
+			<h4>Update Item</h4>
+			<form action="#" th:action ="@{/save}" th:object="${itemAdmin}" method = "POST">
+			<input name="id" class="form-control" placeholder="Name" type="text" th:value="*{id}" readonly>
+			<br/>
+			<input name="name" class="form-control" placeholder="Name" type="text" th:field="*{item_name}" required>
+				<br/>
+				Color
+				<input name="color" class="form-control" placeholder="Color" type="text" th:value="*{color}?: '(not specified)'">
+				<br/>
+				Stock
+				<input name="stock" class="form-control" placeholder="Stock"  type="text" value=1 th:errorclass="field-error" >
+				<br/>
+				Price
+				<input name="price" class="form-control" placeholder="Price" type="text" value=2 th:errorclass="field-error">
+				<br/>
+				Discount
+				<input name="discount" class="form-control" placeholder="Discount"  type="text" value=3 th:errorclass="field-error">
+				<br/>
+				Rating
+				<input name="rating" class="form-control" placeholder="Rating" type="text" value=4 th:errorclass="field-error">
+				<br/>
+				Sold
+				<input name="sold" class="form-control" placeholder="Sold" type="text" value=5 th:errorclass="field-error">
+				<br/>
+				Seen
+				<input name="seen" class="form-control" placeholder="Seen"  type="text" value=6 th:errorclass="field-error">
+				<br/>
+				Length
+				<input name="length" class="form-control" placeholder="Length" type="text" value=7 th:errorclass="field-error">
+				<br/> 
+				
+				<div th:object="${itemDetailAdmin}">
+					Weight
+					<input name="weight" class="form-control" placeholder="Weight" type="text" value=8 th:errorclass="field-error">
+					<br/>
+					Condition
+					<input name="condition" class="form-control" placeholder="Condition" type="text" value="(not specified)" th:errorclass="field-error">
+					<br/>
+					Category
+					<input name="category" class="form-control" placeholder="Category"  type="text" value="(not specified)" th:errorclass="field-error">
+					<br/>
+					Insurance
+					<input name="insurance" class="form-control" placeholder="Insurance" type="text" value=10 th:errorclass="field-error">
+					<br/>
+				</div>	
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-block"> Update </button>
+				</div> 
+			</form> 
+		</article>
+	</div>
+
+</body>
+</html>
